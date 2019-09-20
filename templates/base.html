@@ -15,7 +15,14 @@
   <body id="body" data-currentpage="{{ currentPage }}">
     <div class="navbar">
         <span class="navbar-brand">GridLocked</span>
-        <a href="{% url 'login' %}">Login</a>
+        {% if user.is_authenticated %}
+          <div id="logout-block">
+            <span>{{ request.user }}</span>
+            <a href="{% url 'logout' %}">Logout</a>
+          </div>
+        {% else %}
+          <a href="{% url 'login' %}">Login</a>
+        {% endif %}
         <div class="navigation-links">
             <a class="nav-item nav-link" id="battles-link" href="{% url 'battles' %}">Battles</a>
             <a class="nav-item nav-link" id="workshop-link" href="{% url 'workshop' %}">Workshop</a>

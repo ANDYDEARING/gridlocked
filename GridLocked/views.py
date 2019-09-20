@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import logout
 
 def battles(request):
     """View function for battles page of site."""
@@ -20,3 +21,7 @@ def workshop(request):
         'currentPage' : "workshop",
     }
     return render(request, 'workshop.html', context=context)
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')

@@ -16,6 +16,12 @@ body{
     color:red;
 }
 
+#logout-block{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
 @media only screen and (max-device-width: 480px) {
     .navigation-links{
         justify-content: space-between;
