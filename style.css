@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    color: aqua;
+    color: white;
 }
 
 .navbar{
@@ -10,6 +10,10 @@ body{
 .navigation-links{
     display: flex;
     width: 100%;
+}
+
+.nav-link.active{
+    color:red;
 }
 
 @media only screen and (max-device-width: 480px) {
