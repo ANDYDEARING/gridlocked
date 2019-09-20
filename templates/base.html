@@ -17,9 +17,9 @@
         <span class="navbar-brand">GridLocked</span>
         <span>Username</span>
         <div class="navigation-links">
-            <a class="nav-item nav-link" href="">Battles</a>
-            <a class="nav-item nav-link" href="">Workshop</a>
-            <a class="nav-item nav-link" href="">Explore</a>
+            <a class="nav-item nav-link" href="{% url 'battles' %}">Battles</a>
+            <a class="nav-item nav-link" href="{% url 'workshop' %}">Workshop</a>
+            <a class="nav-item nav-link" href="{% url 'explore' %}">Explore</a>
         </div>
     </div>
     {% block content %}{% endblock %}

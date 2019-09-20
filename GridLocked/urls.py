@@ -28,6 +28,8 @@ urlpatterns = [
 urlpatterns += [
     path('', RedirectView.as_view(url='battles/')),
     path('battles/', views.battles, name='battles'),
+    path('workshop/', views.workshop, name='workshop'),
+    path('explore/', views.explore, name='explore'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
