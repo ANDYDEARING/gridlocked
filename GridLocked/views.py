@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='login')
 def battles(request):
     """View function for battles page of site."""
     context={
@@ -8,6 +10,7 @@ def battles(request):
     }
     return render(request, 'battles.html', context=context)
 
+@login_required(login_url='login')
 def explore(request):
     """View function for explore page of site."""
     context={
@@ -15,6 +18,7 @@ def explore(request):
     }
     return render(request, 'explore.html', context=context)
 
+@login_required(login_url='login')
 def workshop(request):
     """View function for workshop page of site."""
     context={
