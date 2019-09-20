@@ -10,16 +10,17 @@
     <!-- Add additional CSS in static file -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script type="text/javascript" src="{% static 'script.js' %}" defer></script>
     {% block head %}{% endblock %}
   </head>
-  <body>
+  <body data-currentpage="{{ currentPage }}">
     <div class="navbar">
         <span class="navbar-brand">GridLocked</span>
         <span>Username</span>
         <div class="navigation-links">
-            <a class="nav-item nav-link" href="{% url 'battles' %}">Battles</a>
-            <a class="nav-item nav-link" href="{% url 'workshop' %}">Workshop</a>
-            <a class="nav-item nav-link" href="{% url 'explore' %}">Explore</a>
+            <a class="nav-item nav-link" id="battles-link" href="{% url 'battles' %}">Battles</a>
+            <a class="nav-item nav-link" id="workshop-link" href="{% url 'workshop' %}">Workshop</a>
+            <a class="nav-item nav-link" id="explore-link" href="{% url 'explore' %}">Explore</a>
         </div>
     </div>
     {% block content %}{% endblock %}
