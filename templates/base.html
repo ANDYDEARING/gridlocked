@@ -15,7 +15,7 @@
   <body id="body" data-currentpage="{{ currentPage }}">
     <div class="navbar">
         <span class="navbar-brand">GridLocked</span>
-        <span>Username</span>
+        <a href="{% url 'login' %}">Login</a>
         <div class="navigation-links">
             <a class="nav-item nav-link" id="battles-link" href="{% url 'battles' %}">Battles</a>
             <a class="nav-item nav-link" id="workshop-link" href="{% url 'workshop' %}">Workshop</a>
