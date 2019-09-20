@@ -1,1 +1,0 @@
-document.querySelector("#main-heading").innerText = "JavaScript Works";
