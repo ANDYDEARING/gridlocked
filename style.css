@@ -9,6 +9,11 @@ body{
 
 .navigation-links{
     display: flex;
-    justify-content: space-between;
     width: 100%;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .navigation-links{
+        justify-content: space-between;
+    }
 }
