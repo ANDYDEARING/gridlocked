@@ -22,6 +22,14 @@ body{
     text-align: right;
 }
 
+.login-form{
+    padding-left: 25px;
+}
+
+.button{
+    background-color: white;
+}
+
 @media only screen and (max-device-width: 480px) {
     .navigation-links{
         justify-content: space-between;
