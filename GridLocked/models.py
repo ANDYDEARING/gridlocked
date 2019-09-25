@@ -6,16 +6,10 @@ from django.urls import reverse
 class Fighter (models.Model):
     name = models.CharField(max_length = 250)
     max_health = models.PositiveIntegerField(default=0)
-    left_equip = models.
-    right_equip = 
-    back_equip = 
-
-
-    content = models.TextField()
-    author = models.ForeignKey(to=User, on_delete=models.SET_NULL, null=True)
-    correct_answer = models.OneToOneField(to="Answer", on_delete=models.SET_NULL, null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    times_favorited = models.PositiveIntegerField(default=0)
+    general = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    left_equip = models.ManyToManyField('Equipment', related_name='+')
+    right_equip = models.ManyToManyField('Equipment', related_name='+')
+    back_equip = models.ManyToManyField('Equipment', related_name='+')
 
     def __str__(self):
         return self.name
@@ -24,4 +18,11 @@ class Fighter (models.Model):
         ordering = ['name']
 
 class Equipment (models.Model):
-    name = 
+    name = models.CharField(max_length = 250)
+    weapon_range = models.PositiveIntegerField(default=0)
+    damage = models.PositiveIntegerField(default=0)
+    attribute = models.CharField(max_length = 250)
+
+    def __str__(self):
+        return self.name
+
