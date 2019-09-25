@@ -21,7 +21,10 @@
             <a href="{% url 'logout' %}">Logout</a>
           </div>
         {% else %}
-          <a href="{% url 'login' %}">Login</a>
+          <div class="login-register-block">
+            <a class="login-link" href="{% url 'login' %}">Login</a>
+            <a class="login-link" href="{% url 'register' %}">Register</a>
+          </div>
         {% endif %}
         <div class="navigation-links">
             <a class="nav-item nav-link" id="battles-link" href="{% url 'battles' %}">Battles</a>
