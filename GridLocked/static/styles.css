@@ -22,8 +22,14 @@ body{
     text-align: right;
 }
 
+.login-register-block{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
 .login-form{
-    padding-left: 25px;
+    padding: 1rem;
 }
 
 .button{
@@ -33,5 +39,12 @@ body{
 @media only screen and (max-device-width: 480px) {
     .navigation-links{
         justify-content: space-between;
+    }
+
+    .login-register-block{
+        flex-direction: row;
+    }
+    .login-link {
+        padding-left: .25rem;
     }
 }
