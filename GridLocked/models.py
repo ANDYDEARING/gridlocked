@@ -21,8 +21,11 @@ class Equipment (models.Model):
     name = models.CharField(max_length = 250)
     weapon_range = models.PositiveIntegerField(default=0)
     damage = models.PositiveIntegerField(default=0)
-    attribute = models.CharField(max_length = 250)
+    attribute = models.CharField(max_length = 250, null=True, blank=True)
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = 'Equipment'
 
