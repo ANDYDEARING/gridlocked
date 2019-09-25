@@ -20,8 +20,8 @@ class Fighter (models.Model):
 class Equipment (models.Model):
     name = models.CharField(max_length = 250)
     weapon_range = models.PositiveIntegerField(default=0)
-    damage = models.IntegerField(default=0)
-    attribute = models.CharField(max_length = 250, null=True, blank=True)
+    force = models.PositiveIntegerField(default=0)
+    attribute = models.ForeignKey(to='Attribute', on_delete=models.SET_NULL, null=True, blank=True)
     min_range_offest = models.PositiveIntegerField(default=0)
     area_of_effect = models.PositiveIntegerField(default=0)
 
@@ -30,4 +30,8 @@ class Equipment (models.Model):
 
     class Meta:
         verbose_name_plural = 'Equipment'
+
+class Attribute (models.Model):
+    name = models.CharField(max_length = 250)
+    polarity = models.BooleanField
 
