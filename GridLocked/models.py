@@ -10,7 +10,7 @@ class Fighter (models.Model):
     left_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
     right_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
     back_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
-    attribute = models.ForeignKey(to='Attribute', on_delete=models.SET_NULL, null=True, blank=True)
+    strong_vs = models.ManyToManyField(to='Attribute', blank=True)
 
     def __str__(self):
         return self.name
@@ -35,5 +35,8 @@ class Equipment (models.Model):
 class Attribute (models.Model):
     name = models.CharField(max_length = 250)
     bonus_vs = models.ManyToManyField(to='Attribute', blank=True)
+
+    def __str__(self):
+        return self.name
 
 
