@@ -10,6 +10,7 @@ class Fighter (models.Model):
     left_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
     right_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
     back_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
+    attribute = models.ForeignKey(to='Attribute', on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
         return self.name
