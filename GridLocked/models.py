@@ -20,8 +20,10 @@ class Fighter (models.Model):
 class Equipment (models.Model):
     name = models.CharField(max_length = 250)
     weapon_range = models.PositiveIntegerField(default=0)
-    damage = models.PositiveIntegerField(default=0)
+    damage = models.IntegerField(default=0)
     attribute = models.CharField(max_length = 250, null=True, blank=True)
+    min_range_offest = models.PositiveIntegerField(default=0)
+    area_of_effect = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.name
