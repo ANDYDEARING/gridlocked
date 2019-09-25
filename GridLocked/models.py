@@ -34,6 +34,6 @@ class Equipment (models.Model):
 
 class Attribute (models.Model):
     name = models.CharField(max_length = 250)
-    nemesis_attribute = models.ManyToManyField(to='Attribute', blank=True)
+    bonus_vs = models.ManyToManyField(to='Attribute', blank=True)
 
 
