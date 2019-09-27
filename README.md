@@ -1,4 +1,4 @@
-# gridlocked
+# GridLocked
 
 GridLocked is a single or multiplayer turn-based strategy game. The player interface is
 separated into Battles, Workshop, and Explore.
