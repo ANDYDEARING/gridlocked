@@ -52,6 +52,7 @@ def test_mech_stat_generator():
     failed = 0
     frequency = {}
     mech_array = make_random_mech_stats(TESTS)
+    print(f"FIRST: {mech_array[0]}")
     for mech in mech_array:
         if total(mech) != 12:
             failed += 1
