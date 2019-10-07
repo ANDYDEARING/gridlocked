@@ -14,7 +14,7 @@ def test():
     while i<10:
         print(next_number(245,50,100))
         i = i+1
-test()
+
 
 
 
