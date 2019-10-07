@@ -9,10 +9,12 @@ def next_number(total_so_far, numbers_remaining, set_length):
         min_value = max(target_number-(5*(numbers_remaining-1)) ,1)
         max_value = min(target_number-(1*(numbers_remaining-1)) ,5)
         return randint(min_value,max_value)
-i = 0
-while i<10:
-    print(next_number(245,50,100))
-    i = i+1
+def test():
+    i = 0
+    while i<10:
+        print(next_number(245,50,100))
+        i = i+1
+test()
 
 
 
