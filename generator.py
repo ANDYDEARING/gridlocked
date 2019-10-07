@@ -58,7 +58,7 @@ def test_mech_stat_generator():
         for str(value) in mech:
             if value in frequency:
                 frequency[value] += 1
-            else
+            else:
                 frequency[value] = 1
     print("REPORT:")
     print(f"FAILURES: {failed}")
