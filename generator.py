@@ -19,7 +19,15 @@ def total(iterabable):
     """
     Calculates the total of all items in an interable. Returns 0 if empty
     """
-    
+    if len(iterable) == 0:
+        return 0
+    else:
+        total = 0
+        index = 0
+        for item in iterable:
+            total += iterable[index]
+            index += 1
+        return total
 
 def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
     """
