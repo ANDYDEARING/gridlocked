@@ -47,7 +47,7 @@ def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
         mech_array.append(tuple(new_profile))
     return mech_array
 
-def test_mech_stat_generator(){
+def test_mech_stat_generator():
     TESTS = 1000
     failed = 0
     frequency = {}
@@ -64,7 +64,6 @@ def test_mech_stat_generator(){
     print(f"FAILURES: {failed}")
     print("FREQUENCY:")
     print(frequency)
-}
 
 test_mech_stat_generator()
 
