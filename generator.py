@@ -15,13 +15,23 @@ def next_number(total_so_far, numbers_remaining, set_length):
     max_value = min(target_number-(1*(numbers_remaining-1)) ,5)
     return randint(min_value,max_value)
 
-def make_random_mech_stats(number_of_mechs, number_of_attributes=4):
+def total(iterabable):
+    """
+    Calculates the total of all items in an interable. Returns 0 if empty
+    """
+    
+
+def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
     """
     Accepts an integer for the desired number of random mech stats and
-    returns a list that size of tuples (of default length 4). The tuples contain
-    a value of 1 to 5 inclusive
+    returns a list that size of tuple profiles (of default length 4). The tuples 
+    contain a value of 1 to 5 inclusive
     """
     mech_array = []
+    for profile in range(0,number_of_profiles):
+        new_profile = []
+        for attribute in range(0,number_of_attributes):
+            new_profile.append(next_number())
 
     return mech_array[]
 
