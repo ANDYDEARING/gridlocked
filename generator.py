@@ -62,7 +62,7 @@ def test_mech_stat_generator():
             else:
                 frequency[value_str] = 1
     print("REPORT:")
-    print("FAILURES: " + str(failed))
+    print(f"FAILURES: {failed}")
     print("FREQUENCY:")
     print(frequency)
 
