@@ -6,6 +6,8 @@ def next_number(total_so_far, numbers_remaining, set_length):
     average value across all stats is 3 out of 5 and returns an integer between 1 and
     5 inclusive that won't make the mean of 3 impossible
     """
+    if numbers_remaining > (set_length/2):
+        return randint(1,5)
     target_number = (3 * set_length) - total_so_far
     if target_number < 1:
         print("You messed up")
