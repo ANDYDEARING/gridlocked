@@ -39,8 +39,13 @@ def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
     for profile in range(0,number_of_profiles):
         new_profile = []
         for attribute in range(0,number_of_attributes):
-            new_profile.append(next_number())
-
+            new_profile.append(next_number(
+                total(new_profile),
+                number_of_attributes - len(new_profile),
+                number_of_attributes
+                ))
     return mech_array[]
+
+print(make_random_mech_stats(5))
 
 
