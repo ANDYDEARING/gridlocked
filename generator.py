@@ -44,6 +44,7 @@ def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
                 number_of_attributes - len(new_profile),
                 number_of_attributes
                 ))
+        mech_array.append(tuple(new_profile))
     return mech_array
 
 print(make_random_mech_stats(5))
