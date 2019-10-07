@@ -15,7 +15,7 @@ def next_number(total_so_far, numbers_remaining, set_length):
     max_value = min(target_number-(1*(numbers_remaining-1)) ,5)
     return randint(min_value,max_value)
 
-def total(iterabable):
+def total(iterable):
     """
     Calculates the total of all items in an interable. Returns 0 if empty
     """
