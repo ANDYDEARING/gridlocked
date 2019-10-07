@@ -47,6 +47,25 @@ def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
         mech_array.append(tuple(new_profile))
     return mech_array
 
-print(make_random_mech_stats(5))
+def test_mech_stat_generator(){
+    TESTS = 1000
+    failed = 0
+    frequency = {}
+    mech_array = make_random_mech_stats(TESTS)
+    for mech in mech_array:
+        if total(mech) != 12:
+            failed += 1
+        for str(value) in mech:
+            if value in frequency:
+                frequency[value] += 1
+            else
+                frequency[value] = 1
+    print("REPORT:")
+    print(f"FAILURES: {failed}")
+    print("FREQUENCY:")
+    print(frequency)
+}
+
+test_mech_stat_generator()
 
 
