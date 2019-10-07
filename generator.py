@@ -55,13 +55,14 @@ def test_mech_stat_generator():
     for mech in mech_array:
         if total(mech) != 12:
             failed += 1
-        for str(value) in mech:
-            if value in frequency:
-                frequency[value] += 1
+        for value in mech:
+            value_str = str(value)
+            if value_str in frequency:
+                frequency[value_str] += 1
             else:
-                frequency[value] = 1
+                frequency[value_str] = 1
     print("REPORT:")
-    print(f"FAILURES: {failed}")
+    print("FAILURES: " + str(failed))
     print("FREQUENCY:")
     print(frequency)
 
