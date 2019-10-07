@@ -67,6 +67,4 @@ def test_mech_stat_generator():
     print("FREQUENCY:")
     print(frequency)
 
-test_mech_stat_generator()
-
 
