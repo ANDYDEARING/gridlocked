@@ -2,7 +2,7 @@ from random import randint
 
 def next_number(total_so_far, numbers_remaining, set_length):
     """
-    Generates the next elemental effect number on a random mech. This assumes the
+    Generates the next elemental effect number on a random fighter. This assumes the
     average value across all stats is 3 out of 5 and returns an integer between 1 and
     5 inclusive that won't make the mean of 3 impossible
     """
@@ -29,13 +29,13 @@ def total(iterable):
             index += 1
         return total
 
-def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
+def make_random_fighter_stats(number_of_profiles, number_of_attributes=4):
     """
-    Accepts an integer for the desired number of random mech stats and
+    Accepts an integer for the desired number of random fighter stats and
     returns a list that size of tuple profiles (of default length 4). The tuples 
     contain a value of 1 to 5 inclusive
     """
-    mech_array = []
+    fighter_array = []
     for profile in range(0,number_of_profiles):
         new_profile = []
         for attribute in range(0,number_of_attributes):
@@ -44,19 +44,19 @@ def make_random_mech_stats(number_of_profiles, number_of_attributes=4):
                 number_of_attributes - len(new_profile),
                 number_of_attributes
                 ))
-        mech_array.append(tuple(new_profile))
-    return mech_array
+        fighter_array.append(tuple(new_profile))
+    return fighter_array
 
-def test_mech_stat_generator():
+def test_fighter_stat_generator():
     TESTS = 1000
     failed = 0
     frequency = {}
-    mech_array = make_random_mech_stats(TESTS)
-    print(f"FIRST: {mech_array[0]}")
-    for mech in mech_array:
-        if total(mech) != 12:
+    fighter_array = make_random_fighter_stats(TESTS)
+    print(f"FIRST: {fighter_array[0]}")
+    for fighter in fighter_array:
+        if total(fighter) != 12:
             failed += 1
-        for value in mech:
+        for value in fighter:
             value_str = str(value)
             if value_str in frequency:
                 frequency[value_str] += 1
@@ -68,12 +68,14 @@ def test_mech_stat_generator():
     print(frequency)
 
 # Need a function to save samples to the database
+def add_fighters_to_db:
+    pass
 
 # Need a function to make random weapons and equipment
 
 # Need a function to save samples to the database
 
-# Need a funciton to clear the database of mechs
+# Need a funciton to clear the database of fighters
 
 # Need a function to clear the database of equipment
 
