@@ -68,8 +68,8 @@ def test_fighter_stat_generator():
     print(frequency)
 
 # Need a function to save samples to the database
-def add_fighters_to_db:
-    pass
+def add_fighters_to_db(number_to_add):
+    fighter_stat_array = make_random_fighter_stats(number_to_add)
 
 # Need a function to make random weapons and equipment
 

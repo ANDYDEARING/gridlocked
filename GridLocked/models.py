@@ -8,7 +8,7 @@ from decimal import *
 class Fighter (models.Model):
     name = models.CharField(max_length = 250)
     max_health = models.PositiveIntegerField(default=0)
-    general = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    general = models.ForeignKey(to=User, on_delete=models.CASCADE, null=True, blank=True)
     left_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
     right_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
     back_equip = models.ForeignKey('Equipment', null=True, on_delete=models.SET_NULL, related_name='+')
