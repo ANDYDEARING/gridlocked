@@ -53,10 +53,10 @@ def add_fighters_to_db(request):
     for fighter in fighter_stat_array:
         new_fighter = Fighter()
         new_fighter.name = "Test"
-        energy_value = 0.0
-        acid_value = 0.0
-        metal_value = 0.0
-        quantum_value = 0.0
+        new_fighter.energy_value = 0.0
+        new_fighter.acid_value = 0.0
+        new_fighter.metal_value = 0.0
+        new_fighter.quantum_value = 0.0
         new_fighter.save()
     # for fighter in Fighter.objects.all():
     #     fighter.delete()
