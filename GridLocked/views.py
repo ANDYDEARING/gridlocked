@@ -52,4 +52,7 @@ def add_fighters_to_db(request):
     fighter_stat_array = make_random_fighter_stats(number_to_add)
     for fighter in fighter_stat_array:
         new_fighter = Fighter()
+        new_fighter.name = "Test"
+        new_fighter.save()
+
     return redirect('workshop')
