@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from models import Fighter
 from generator import *
 
 @login_required(login_url='login')
@@ -46,7 +47,9 @@ def register(request):
         form = UserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
 
-def add_fighters_to_db(number_to_add):
-    fighter_stat_array = generator.make_random_fighter_stats(number_to_add)
+def add_fighters_to_db(request):
+    number_to_add = 1
+    fighter_stat_array = make_random_fighter_stats(number_to_add)
     for fighter in fighter_stat_array:
         new_fighter = Fighter.new()
+    return redirect('workshop')
