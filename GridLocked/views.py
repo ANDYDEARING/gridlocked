@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from models import Fighter
+from GridLocked.models import Fighter, Equipment
 from generator import *
 
 @login_required(login_url='login')
