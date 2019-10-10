@@ -73,8 +73,6 @@ def test_fighter_stat_generator():
 
 # Need a function to make random weapons and equipment
 
-# Need a function to save samples to the database
-
 # Need a funciton to clear the database of fighters
 
 # Need a function to clear the database of equipment
