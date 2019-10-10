@@ -55,5 +55,6 @@ def add_fighters_to_db(request):
         # new_fighter = Fighter()
         # new_fighter.name = "Test"
         # new_fighter.save()
-
+    for fighter in Fighter.objects.all():
+        fighter.delete()
     return redirect('workshop')
