@@ -78,5 +78,3 @@ def test_fighter_stat_generator():
 # Need a funciton to clear the database of fighters
 
 # Need a function to clear the database of equipment
-
-add_fighters_to_db(1)
