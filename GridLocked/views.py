@@ -50,11 +50,14 @@ def register(request):
 def add_fighters_to_db(request):
     number_to_add = 1
     fighter_stat_array = make_random_fighter_stats(number_to_add)
-    # doesn't work, default for energy_value doesn't work as expected
-    # for fighter in fighter_stat_array:
-        # new_fighter = Fighter()
-        # new_fighter.name = "Test"
-        # new_fighter.save()
-    for fighter in Fighter.objects.all():
-        fighter.delete()
+    for fighter in fighter_stat_array:
+        new_fighter = Fighter()
+        new_fighter.name = "Test"
+        energy_value = 0.0
+        acid_value = 0.0
+        metal_value = 0.0
+        quantum_value = 0.0
+        new_fighter.save()
+    # for fighter in Fighter.objects.all():
+    #     fighter.delete()
     return redirect('workshop')
