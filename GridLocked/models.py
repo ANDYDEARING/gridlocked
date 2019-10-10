@@ -18,7 +18,7 @@ class Fighter (models.Model):
     quantum_value = models.DecimalField(max_digits=2, decimal_places=1, default=0.0, validators=[MinValueValidator(Decimal(0.0))])
 
     def __str__(self):
-        return f"{self.name} - E:{energy_value} A:{acid_value} M:{metal_value} Q:{quantum_value}"
+        return f"{self.name} - E:{self.energy_value} A:{self.acid_value} M:{self.metal_value} Q:{self.quantum_value}"
 
     class Meta:
         ordering = ['name']
