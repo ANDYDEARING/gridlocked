@@ -67,11 +67,14 @@ def test_fighter_stat_generator():
     print("FREQUENCY:")
     print(frequency)
 
+from GridLocked import models
+
 # Need a function to save samples to the database
 def add_fighters_to_db(number_to_add):
     fighter_stat_array = make_random_fighter_stats(number_to_add)
     for fighter in fighter_stat_array:
-        # build and save model instance here
+        new_fighter = Fighter.new()
+# build and save model instance here
 
 # Need a function to make random weapons and equipment
 
@@ -81,3 +84,4 @@ def add_fighters_to_db(number_to_add):
 
 # Need a function to clear the database of equipment
 
+add_fighters_to_db(1)
