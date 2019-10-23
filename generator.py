@@ -1,5 +1,9 @@
 from random import randint
 
+#actual multiplier values for the 5 stat positions
+STAT_MULTIPLIER_SET = (0.5, 0.75, 1, 1.5, 2)
+
+
 def next_number(total_so_far, numbers_remaining, set_length):
     """
     Generates the next elemental effect number on a random fighter. This assumes the
