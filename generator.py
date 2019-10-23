@@ -4,7 +4,7 @@ from random import randint
 STAT_MULTIPLIER_SET = (0.5, 0.75, 1, 1.5, 2)
 
 ELEMENT_SET = (Energy, Acid, Metal, Quantum)
-WEAPON_SET = (Blaster, MG, Rifle, Missile)
+WEAPON_SET = (Blaster, Cannon, Blade, Bomb)
 
 
 def next_number(total_so_far, numbers_remaining, set_length):
