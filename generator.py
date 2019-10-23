@@ -3,6 +3,9 @@ from random import randint
 #actual multiplier values for the 5 stat positions
 STAT_MULTIPLIER_SET = (0.5, 0.75, 1, 1.5, 2)
 
+ELEMENT_SET = (Energy, Acid, Metal, Quantum)
+WEAPON_SET = (Blaster, MG, Rifle, Missile)
+
 
 def next_number(total_so_far, numbers_remaining, set_length):
     """
@@ -71,12 +74,8 @@ def test_fighter_stat_generator():
     print("FREQUENCY:")
     print(frequency)
 
-# Need a function to save samples to the database
 
-# build and save model instance here
 
 # Need a function to make random weapons and equipment
-
-# Need a funciton to clear the database of fighters
 
 # Need a function to clear the database of equipment
