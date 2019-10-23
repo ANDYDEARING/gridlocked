@@ -50,14 +50,18 @@ def register(request):
 def add_fighters_to_db(request):
     number_to_add = 1
     fighter_stat_array = make_random_fighter_stats(number_to_add)
-    # for fighter in fighter_stat_array:
-    #     new_fighter = Fighter()
-    #     new_fighter.name = "Test"
-    #     new_fighter.energy_value = 0.0
-    #     new_fighter.acid_value = 0.0
-    #     new_fighter.metal_value = 0.0
-    #     new_fighter.quantum_value = 0.0
-    #     new_fighter.save()
+    stat_multiplier = 
+    for fighter in fighter_stat_array:
+        new_fighter = Fighter()
+        new_fighter.name = "Test"
+        new_fighter.energy_value = 0.0
+        new_fighter.acid_value = 0.0
+        new_fighter.metal_value = 0.0
+        new_fighter.quantum_value = 0.0
+        new_fighter.save()
+    
+    return redirect('workshop')
+
+def delete_fighters(request):
     for fighter in Fighter.objects.all():
         fighter.delete()
-    return redirect('workshop')
