@@ -48,11 +48,14 @@ def register(request):
     return render(request, 'registration/register.html', {'form': form})
 
 def add_fighters_to_db(request):
-    number_to_add = 1
+    number_to_add = 10
     fighter_stat_array = make_random_fighter_stats(number_to_add)
     for fighter in fighter_stat_array:
         new_fighter = Fighter()
-        new_fighter.name = "Test"
+        freename = "FL_"
+        for digit in fighter:
+            freename += str(int(digit))
+        new_fighter.name = freename
         new_fighter.energy_value = STAT_MULTIPLIER_SET[fighter[0]-1]
         new_fighter.acid_value = STAT_MULTIPLIER_SET[fighter[1]-1]
         new_fighter.metal_value = STAT_MULTIPLIER_SET[fighter[2]-1]
