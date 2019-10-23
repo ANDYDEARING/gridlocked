@@ -63,3 +63,4 @@ def add_fighters_to_db(request):
 def delete_fighters(request):
     for fighter in Fighter.objects.all():
         fighter.delete()
+    return redirect('workshop')

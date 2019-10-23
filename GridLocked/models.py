@@ -12,10 +12,10 @@ class Fighter (models.Model):
     left_equip = models.ForeignKey('Equipment', null=True, blank=True, on_delete=models.SET_NULL, related_name='+')
     right_equip = models.ForeignKey('Equipment', null=True, blank=True, on_delete=models.SET_NULL, related_name='+')
     back_equip = models.ForeignKey('Equipment', null=True, blank=True, on_delete=models.SET_NULL, related_name='+')
-    energy_value = models.DecimalField(max_digits=2, decimal_places=1, default=0.0, validators=[MinValueValidator(Decimal(0.0))])
-    acid_value = models.DecimalField(max_digits=2, decimal_places=1, default=0.0, validators=[MinValueValidator(Decimal(0.0))])
-    metal_value = models.DecimalField(max_digits=2, decimal_places=1, default=0.0, validators=[MinValueValidator(Decimal(0.0))])
-    quantum_value = models.DecimalField(max_digits=2, decimal_places=1, default=0.0, validators=[MinValueValidator(Decimal(0.0))])
+    energy_value = models.DecimalField(max_digits=3, decimal_places=2, default=0.00, validators=[MinValueValidator(Decimal(0.00))])
+    acid_value = models.DecimalField(max_digits=3, decimal_places=2, default=0.00, validators=[MinValueValidator(Decimal(0.00))])
+    metal_value = models.DecimalField(max_digits=3, decimal_places=2, default=0.00, validators=[MinValueValidator(Decimal(0.00))])
+    quantum_value = models.DecimalField(max_digits=3, decimal_places=2, default=0.00, validators=[MinValueValidator(Decimal(0.00))])
 
     def __str__(self):
         return f"{self.name} - E:{self.energy_value} A:{self.acid_value} M:{self.metal_value} Q:{self.quantum_value}"
