@@ -11,6 +11,8 @@ ELEMENT_SET = ('Energy', 'Acid', 'Metal', 'Quantum')
 WEAPON_SET = ('Blaster', 'Cannon', 'Blade', 'Bomb')
 
 
+
+
 def next_number(total_so_far, numbers_remaining, set_length):
     """
     Generates the next elemental effect number on a random fighter. This assumes the
