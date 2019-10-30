@@ -1,54 +1,101 @@
-body{
-    background-color: black;
-    color: white;
+body {
+  background-image: url("https://images.unsplash.com/photo-1488984255023-366a9062e35c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1508&q=80");
+  background-repeat: no-repeat;
+  background-color: black;
+  color: white;
+  font-family: "Turret Road", cursive;
 }
 
-.navbar{
-    background-color: #333333;
+.navbar {
+  background-color: #333333;
 }
 
 p {
-    margin-left: 2rem;
+  margin-left: 2rem;
+  font-size: 1.5em;
 }
 
-.navigation-links{
-    display: flex;
-    width: 100%;
+h1,
+h2 {
+  font-family: "Special Elite", cursive;
 }
 
-.nav-link.active{
-    color:red;
+.navigation-links {
+  display: flex;
+  width: 100%;
 }
 
-#logout-block{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+.nav-link.active {
+  color: red;
 }
 
-.login-register-block{
-    display: flex;
-    flex-direction: column;
-    text-align: right;
+#logout-block {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
-.login-form{
-    padding: 1rem;
+.login-register-block {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }
 
-.button{
-    background-color: white;
+.login-form {
+  padding: 1rem;
+}
+
+.button {
+  background-color: white;
+}
+
+/* kyle's CSS for battles.html */
+
+/* FONT FAMILIES
+font-family: 'Righteous', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Turret Road', cursive;
+font-family: 'Special Elite', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Audiowide', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'VT323', monospace;
+font-family: 'Syncopate', sans-serif;
+font-family: 'Bungee Inline', cursive; */
+
+.game-header {
+  margin-top:  0.7em;
+  margin-bottom: 0.5em;
+  font-size: 3em;
+}
+
+.game-page {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.game-block {
+  flex: 0 0 670px;
+  width: 80%;
+  background-color: gray;
+  margin-bottom: 50px;
+}
+
+.info-block {
+  margin: 1em 2em 1em 2em;
 }
 
 @media only screen and (max-device-width: 480px) {
-    .navigation-links{
-        justify-content: space-between;
-    }
+  .navigation-links {
+    justify-content: space-between;
+  }
 
-    .login-register-block{
-        flex-direction: row;
-    }
-    .login-link {
-        padding-left: .25rem;
-    }
+  .login-register-block {
+    flex-direction: row;
+  }
+  .login-link {
+    padding-left: 0.25rem;
+  }
 }
