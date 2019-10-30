@@ -63,9 +63,9 @@ font-family: 'VT323', monospace;
 font-family: 'Syncopate', sans-serif;
 font-family: 'Bungee Inline', cursive; */
 
-
 .game-header {
-  margin: 0.6em;
+  margin-top:  0.7em;
+  margin-bottom: 0.5em;
   font-size: 3em;
 }
 
@@ -80,11 +80,12 @@ font-family: 'Bungee Inline', cursive; */
   flex: 0 0 670px;
   width: 80%;
   background-color: gray;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .info-block {
   display: inline-flex;
+  margin: 1em 2em 1em 2em;
 }
 
 @media only screen and (max-device-width: 480px) {
