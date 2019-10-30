@@ -6,10 +6,27 @@ STAT_MULTIPLIER_SET = (0.5, 0.75, 1, 1.5, 2)
 #Heavy extra damage at the cost of speed, Light faster at the cost of damage,
 #Ruinous applies a status effect, Piercing decreases element defense at the cost
 #damage
-SPECIAL_SET = ('Heavy', 'Light', 'Ruinous', 'Piercing')
+# SPECIAL_SET = ('Heavy', 'Light', 'Ruinous', 'Piercing')
+
+#simpler to get the game up and running
 ELEMENT_SET = ('Energy', 'Acid', 'Metal', 'Quantum')
 WEAPON_SET = ('Blaster', 'Cannon', 'Blade', 'Bomb')
 
+def weapon_name_list_generator(number_to_generate):
+    """
+    Generates a list of randomly generated names from ELEMENT_SET and WEAPON_SET
+    """
+    weapon_name_list = []
+    if number_to_generate < 1:
+        return weapon_name_list
+    for weapon in range(0,number_to_generate):
+        weapon_name_list.append(
+            f"{ELEMENT_SET[randint(0,len(ELEMENT_SET)-1)]} {WEAPON_SET[randint(0,len(WEAPON_SET)-1)]}"
+        )
+    return weapon_name_list
+
+#TEST
+#print(weapon_name_list_generator(3))
 
 def next_number(total_so_far, numbers_remaining, set_length):
     """
