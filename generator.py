@@ -6,9 +6,9 @@ STAT_MULTIPLIER_SET = (0.5, 0.75, 1, 1.5, 2)
 #Heavy extra damage at the cost of speed, Light faster at the cost of damage,
 #Ruinous applies a status effect, Piercing decreases element defense at the cost
 #damage
-SPECIAL_SET = (Heavy, Light, Ruinous, Piercing)
-ELEMENT_SET = (Energy, Acid, Metal, Quantum)
-WEAPON_SET = (Blaster, Cannon, Blade, Bomb)
+SPECIAL_SET = ('Heavy', 'Light', 'Ruinous', 'Piercing')
+ELEMENT_SET = ('Energy', 'Acid', 'Metal', 'Quantum')
+WEAPON_SET = ('Blaster', 'Cannon', 'Blade', 'Bomb')
 
 
 def next_number(total_so_far, numbers_remaining, set_length):
