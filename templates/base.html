@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {% block title %}<title>GridLocked</title>{% endblock %}
-    {% block meta %}{% endblock %}
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% block title %}
+    <title>GridLocked</title>
+    {% endblock %} {% block meta %}{% endblock %}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <script type="text/javascript" src="{% static 'script.js' %}" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Inline|Monoton|Orbitron|Press+Start+2P|Righteous|Special+Elite|Syncopate|Turret+Road|VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    <script
+      type="text/javascript"
+      src="{% static 'script.js' %}"
+      defer
+    ></script>
     {% block head %}{% endblock %}
   </head>
   <body id="body" data-currentpage="{{ currentPage }}">
     <div class="navbar">
-        <span class="navbar-brand">GridLocked</span>
-        {% if user.is_authenticated %}
-          <div id="logout-block">
-            <span>{{ request.user }}</span>
-            <a href="{% url 'logout' %}">Logout</a>
-          </div>
-        {% else %}
-          <div class="login-register-block">
-            <a class="login-link" href="{% url 'login' %}">Login</a>
-            <a class="login-link" href="{% url 'register' %}">Register</a>
-          </div>
-        {% endif %}
-        <div class="navigation-links">
-            <a class="nav-item nav-link" id="battles-link" href="{% url 'battles' %}">Battles</a>
-            <a class="nav-item nav-link" id="workshop-link" href="{% url 'workshop' %}">Workshop</a>
-            <a class="nav-item nav-link" id="explore-link" href="{% url 'explore' %}">Explore</a>
-        </div>
+      <span class="navbar-brand">GridLocked</span>
+      {% if user.is_authenticated %}
+      <div id="logout-block">
+        <span>{{ request.user }}</span>
+        <a href="{% url 'logout' %}">Logout</a>
+      </div>
+      {% else %}
+      <div class="login-register-block">
+        <a class="login-link" href="{% url 'login' %}">Login</a>
+        <a class="login-link" href="{% url 'register' %}">Register</a>
+      </div>
+      {% endif %}
+      <div class="navigation-links">
+        <a
+          class="nav-item nav-link"
+          id="battles-link"
+          href="{% url 'battles' %}"
+          >Battles</a
+        >
+        <a
+          class="nav-item nav-link"
+          id="workshop-link"
+          href="{% url 'workshop' %}"
+          >Workshop</a
+        >
+        <a
+          class="nav-item nav-link"
+          id="explore-link"
+          href="{% url 'explore' %}"
+          >Explore</a
+        >
+      </div>
     </div>
     {% block content %}{% endblock %}
   </body>
