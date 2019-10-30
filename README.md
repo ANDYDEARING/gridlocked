@@ -23,7 +23,10 @@ separated into Battles, Workshop, and Explore.
 
 <h1>Explore</h1>
     <p>Here the player explores the map, discovering other player bases, roving bands of Freelancers, and other suprises.</p>
-    <p>The player can move as many teams as they have independently. Smaller teams allow for more coverage, but less strength in the event of a battle. Any battles that occur move to the Battles tab and movement is frozen until they're resolved.</p>
+    <p>The player can move as many teams as they have independently. Smaller teams allow for more coverage, but less strength in the event of a battle. Any battles that occur move to the Battles tab and movement is frozen until they're resolved.<p>
 
-
-
+<h1>Collaborators</h1>
+    <p>David Zordich</p>
+    <p>Greg Dickson</p>
+    <p>Zeke Hart</p>
+    <p>Meagan Makinson</p>
