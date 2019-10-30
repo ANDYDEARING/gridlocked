@@ -49,8 +49,8 @@ def register(request):
 
 def add_fighters_to_db(request):
     number_to_add = 10
-    fighter_stat_array = make_random_fighter_stats(number_to_add)
-    for fighter in fighter_stat_array:
+    fighter_stat_list = make_random_fighter_stats(number_to_add)
+    for fighter in fighter_stat_list:
         new_fighter = Fighter()
         freename = "FL_"
         for digit in fighter:
@@ -66,4 +66,37 @@ def add_fighters_to_db(request):
 def delete_fighters(request):
     for fighter in Fighter.objects.all():
         fighter.delete()
+    return redirect('workshop')
+
+def add_weapons_to_db(request):
+    number_to_add = 10
+    weapon_name_list = weapon_name_list_generator(number_to_add)
+    for weapon_name in weapon_name_list:
+        new_weapon = Equipment()
+        new_weapon_words = weapon_name.split()
+        new_weapon.name = weapon_name
+        new_weapon.force = 1
+        new_weapon.attribute = new_weapon_words[0][0].upper
+        if new_weapon_words[1] == "Blaster":
+            new_weapon.weapon_range = 2
+            new_weapon.min_range_offest = 2
+            new_weapon.area_of_effect = 1
+        elif new_weapon_words[1] == "Cannon":
+            new_weapon.weapon_range = 6
+            new_weapon.min_range_offest = 0
+            new_weapon.area_of_effect = 0
+        elif new_weapon_words[1] == "Blade":
+            new_weapon.weapon_range = 1
+            new_weapon.min_range_offest = 0
+            new_weapon.area_of_effect = 0
+        elif new_weapon_words[1] == "Bomb":
+            new_weapon.weapon_range = 10
+            new_weapon.min_range_offest = 3
+            new_weapon.area_of_effect = 2
+        new_weapon.save()
+    return redirect('workshop')
+
+def delete_weapons(request):
+    for weapon in Equipment.objects.all():
+        weapon.delete()
     return redirect('workshop')

@@ -36,6 +36,8 @@ urlpatterns += [
     path('explore/', views.explore, name='explore'),
     path('generateFighters/', views.add_fighters_to_db, name='generateFighters'),
     path('deleteFighters/', views.delete_fighters, name='deleteFighters'),
+    path('generateWeapons/', views.add_weapons_to_db, name='generateWeapons'),
+    path('deleteWeapons/', views.delete_weapons, name='deleteWeapons'),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
