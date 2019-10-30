@@ -84,7 +84,6 @@ font-family: 'Bungee Inline', cursive; */
 }
 
 .info-block {
-  display: inline-flex;
   margin: 1em 2em 1em 2em;
 }
 
