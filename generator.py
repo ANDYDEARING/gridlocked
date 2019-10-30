@@ -13,6 +13,9 @@ ELEMENT_SET = ('Energy', 'Acid', 'Metal', 'Quantum')
 WEAPON_SET = ('Blaster', 'Cannon', 'Blade', 'Bomb')
 
 def weapon_name_list_generator(number_to_generate):
+    """
+    Generates a list of randomly generated names from ELEMENT_SET and WEAPON_SET
+    """
     weapon_name_list = []
     if number_to_generate < 1:
         return weapon_name_list
@@ -23,8 +26,7 @@ def weapon_name_list_generator(number_to_generate):
     return weapon_name_list
 
 #TEST
-
-print(weapon_name_list_generator(3))
+#print(weapon_name_list_generator(3))
 
 def next_number(total_so_far, numbers_remaining, set_length):
     """
