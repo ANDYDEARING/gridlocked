@@ -7,7 +7,6 @@ verify_ssl = true
 
 [packages]
 django = "*"
-whitenoise = "*"
 gunicorn = "*"
 django-heroku = "*"
 
