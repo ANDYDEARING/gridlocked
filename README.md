@@ -30,3 +30,5 @@ separated into Battles, Workshop, and Explore.
     <p>Greg Dickson</p>
     <p>Zeke Hart</p>
     <p>Meagan Makinson</p>
+    <p>Kyle Heidelberger</p>
+    <p>Eric Tinoco</p>
