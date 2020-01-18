@@ -99,3 +99,13 @@ font-family: 'Bungee Inline', cursive; */
     padding-left: 0.25rem;
   }
 }
+
+td, tr{
+  border:1px solid white;
+}
+.player{
+  padding: 0px;
+  margin: 0px;
+  height: 50px;
+  width: 50px;
+}
