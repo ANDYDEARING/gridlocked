@@ -47,6 +47,10 @@ function addCharacter(){
     addCharacterToGridActivated = true; 
 }
 
+function moveCharacter(){
+    console.log("YU MOVE NOW!");
+}
+
 function listenerForA1(){
     if(addCharacterToGridActivated){
         A1.src = frog;
