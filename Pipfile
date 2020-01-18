@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "*"
 whitenoise = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.7"
